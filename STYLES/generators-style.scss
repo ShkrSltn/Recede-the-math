@@ -42,7 +42,7 @@
 }
 
 .form__label {
-    width: 30rem;
+    width: 60%;
     font-size: 2rem;
 }
 
@@ -117,13 +117,15 @@
 }
 
 .results-div {
-    width: 100%;
+    width: 100vw;
     gap: 10px;
     text-align: center;
+    padding: 1rem 2rem;
 
     ul {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-auto-flow: row;
         gap: 1rem;
 
         li {
