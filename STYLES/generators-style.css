@@ -36,7 +36,7 @@
 
 .form__label {
   width: 60%;
-  font-size: 2rem;
+  font-size: min(2rem, 5vw);
 }
 
 .form__input {
@@ -70,6 +70,7 @@
 }
 
 .form__button {
+  width: 20rem;
   margin-top: 1rem;
   font-size: 2rem;
   padding: 1rem;
