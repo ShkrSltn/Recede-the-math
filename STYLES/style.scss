@@ -49,17 +49,22 @@ ul {
 }
 
 header {
-    .header__container {
-        padding: 1rem;
-    }
+    padding: 1rem 5rem;
 
     ul {
-        list-style-type: none;
+        /*   list-style-type: none;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        flex-wrap: wrap;
+        flex-wrap: wrap; */
+
+        display: grid;
+        // grid-template-columns: repeat(auto-fill, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+        align-items: center;
+        gap: 10px;
+        text-align: center;
 
         #logo {
             background: none;
@@ -178,7 +183,7 @@ header {
     margin-top: 15rem;
     h2 {
         text-align: center;
-        font-size: 4vw;
+        font-size: 4rem;
     }
     .divide-two {
         margin-top: 5rem;
@@ -361,6 +366,52 @@ footer {
     #line {
         padding: 2rem;
         gap: 1rem;
+    }
+
+    #functions {
+        ul {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header {
+        ul {
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem;
+
+            li {
+                padding: 0.5rem;
+            }
+        }
+    }
+
+    #easy {
+        .math-text {
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .general {
+        .inner {
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    #important {
+        h2 {
+            font-size: 2rem;
+        }
+    }
+
+    #line {
+        padding: 1rem;
     }
 
     #functions {
