@@ -1,0 +1,146 @@
+@import url(/STYLES/style.scss);
+
+.all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.red {
+    color: red;
+}
+
+.tips {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.tips__text {
+}
+
+.main__title {
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.main-form {
+    padding: 10px;
+    width: 100%;
+    border: 0.5px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-shrink: 1;
+}
+
+.form {
+}
+
+.form__label {
+    width: 30rem;
+    font-size: 2rem;
+}
+
+.form__input {
+    font-size: 2rem;
+    width: 100%;
+    height: fit-content;
+    padding: 1rem;
+    font-family: Montserrat, sans-serif;
+    color: #51af5b;
+    outline: none;
+    border: none;
+    background: #393e46;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+.form__input::placeholder {
+    color: #51af5b;
+}
+
+.form__option {
+    color: #51af5b;
+}
+
+.form__button {
+    margin-top: 1rem;
+    font-size: 2rem;
+    padding: 1rem;
+    border: 0.5px solid #51af5b;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    background-color: #393e46;
+    color: aliceblue;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #51af5b;
+    }
+}
+
+.btn:hover {
+    background-color: #75cac3;
+}
+
+.problems__block {
+    font-family: monospace;
+}
+
+.problems__title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    border: 0.5px solid #393e46;
+    font-weight: 500;
+    padding: 10px;
+
+    color: snow;
+}
+
+.results-div {
+    width: 100%;
+    gap: 10px;
+    text-align: center;
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+
+        li {
+            color: #393e46;
+            border: 0.5px solid #393e46;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            padding: 1.5rem;
+            font-weight: 700;
+
+            &:hover {
+                background-color: #393e46;
+                color: #51af5b;
+            }
+        }
+    }
+}

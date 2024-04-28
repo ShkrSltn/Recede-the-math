@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition</title>
+    <link rel="stylesheet" href="/STYLES/style.css">
+    <link rel=" stylesheet" href="/STYLES/generators-style.css">
+    <script src="/SCRIPTS/main-script.js" defer></script>
+</head>
+
+<body>
+    <div class="all">
+        <h1 class="main__title">Math problem generators</h1>
+        <h2>ADDITION</h2>
+        <form class="main-form form" id="myForm">
+            <label for="min" class="form__label">Minimum
+                <input value="1" type="number" placeholder="min" id="min" class="form__input">
+            </label>
+            <label for="max" class="form__label">Maximum
+                <input value="10" type="number" placeholder="max" id="max" class="form__input">
+            </label>
+            <label for="count" class="form__label">Count of problems (max 50)
+                <input value="5" type="number" placeholder="count-of-problems" id="count" class="form__input">
+            </label>
+            <input type="hidden" value="sum" name="type" id="forType">
+            <button id="execute" type="submit" class="form__button">Generate</button>
+            <div class="tips">
+                <p class="tips__text">
+                    *Minimum and maximum define the interval
+                </p>
+            </div>
+        </form>
+
+        <div class="problems__block" id="problemsB">
+            <h2 class="problems__title">Problems</h2>
+            <div class="problems__container" id="container">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
