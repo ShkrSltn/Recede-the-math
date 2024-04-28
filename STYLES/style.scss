@@ -157,6 +157,8 @@ header {
     gap: 20%;
 
     .photo {
+        min-width: 15rem;
+        height: auto;
         img {
             width: 100%;
         }
@@ -328,5 +330,42 @@ footer {
     font-size: 1.5rem;
     p {
         color: white;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main__container {
+        padding: 2rem;
+    }
+
+    #easy {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .general {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    #important {
+        .divide-two {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+
+    #line {
+        padding: 2rem;
+        gap: 1rem;
+    }
+
+    #functions {
+        ul {
+            grid-template-columns: 1fr;
+        }
     }
 }
