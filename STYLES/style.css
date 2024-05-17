@@ -132,6 +132,13 @@ header ul li a img {
   width: 100%;
 }
 
+.img-hovered {
+  transition: transform 0.4s ease-in-out;
+}
+.img-hovered:hover {
+  transform: scale(1.1);
+}
+
 .general {
   margin-top: 10rem;
   display: grid;
@@ -141,15 +148,12 @@ header ul li a img {
 }
 .general .photo {
   min-width: 15rem;
-  height: auto;
+  height: 100%;
 }
-.general .photo img {
-  width: 100%;
+.general .inner {
+  animation: slideIn 1s ease-in-out;
 }
-.general .inner p {
-  margin-top: 1rem;
-}
-.general .inner .subtitle {
+.general .subtitle {
   font-size: 1rem;
 }
 

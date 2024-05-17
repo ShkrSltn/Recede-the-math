@@ -154,6 +154,12 @@ header {
     }
 }
 
+.img-hovered {
+    transition: transform 0.4s ease-in-out;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
 .general {
     margin-top: 10rem;
     display: grid;
@@ -163,19 +169,15 @@ header {
 
     .photo {
         min-width: 15rem;
-        height: auto;
-        img {
-            width: 100%;
-        }
+        height: 100%;
     }
 
     .inner {
-        p {
-            margin-top: 1rem;
-        }
-        .subtitle {
-            font-size: 1rem;
-        }
+        animation: slideIn 1s ease-in-out;
+    }
+
+    .subtitle {
+        font-size: 1rem;
     }
 }
 
