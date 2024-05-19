@@ -148,8 +148,8 @@ let myOperation = (operation, min, max, count) => {
         for (let i = 0; i < count; i++) {
             let a = Math.floor(Math.random() * (max - min + 1)) + min;
             let b = Math.floor(Math.random() * (max - min + 1)) + min;
-            let result = (a > b) ? '>' : (a < b) ? '<' : '=';
-            let resultStr = `${i + 1}) ${a} ? ${b} = ${result}`;
+            let result = (a > b) ? a : (a < b) ? b : "==";
+            let resultStr = `${i + 1}) ${a} ? ${b}`;
             newArray.push(resultStr);
         }
         newArray.forEach((item) => {

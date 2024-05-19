@@ -42,10 +42,10 @@ ul {
   list-style-type: none;
 }
 
-header {
+.header__container {
   padding: 1rem 5rem;
 }
-header ul {
+.header__container ul {
   /*   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -53,39 +53,43 @@ header ul {
   align-items: center;
   flex-wrap: wrap; */
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
-  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
   gap: 10px;
   text-align: center;
 }
-header ul #logo {
+.header__container ul #logo {
   background: none;
+  width: 100%;
 }
-header ul #logo:hover {
+.header__container ul #logo:hover {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
 }
-header ul li {
+.header__container ul li {
   font-family: "Outfit", sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
-  padding: 1rem;
+  height: 100%;
+  padding: 10%;
   border-radius: 5px;
   background-color: #f0f0f0;
-  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
-header ul li:hover {
+.header__container ul li:hover {
   background-color: #e0e0e0;
 }
-header ul li a {
+.header__container ul li a {
+  text-transform: uppercase;
   text-decoration: none;
   color: #000;
 }
-header ul li a img {
+.header__container ul li a img {
   width: 12rem;
 }
 
@@ -277,13 +281,13 @@ header ul li a img {
   background-color: #82cbac;
 }
 
-footer {
+#index-footer {
   background-color: #373737;
   padding: 2rem;
   text-align: center;
   font-size: 1.5rem;
 }
-footer .footer__container {
+#index-footer .footer__container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -291,7 +295,7 @@ footer .footer__container {
   padding: 1rem;
   color: white;
 }
-footer p {
+#index-footer p {
   color: white;
 }
 

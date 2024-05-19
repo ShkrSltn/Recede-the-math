@@ -1,0 +1,100 @@
+.block-title {
+  font-size: clamp(2rem, 10vw, 5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  background-color: #dbf5d3;
+}
+
+#multipltaction-table {
+  padding: 1rem;
+}
+#multipltaction-table .mult-ul {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+#multipltaction-table .mult-ul:nth-child(1) {
+  background-color: #dbf5d3;
+}
+#multipltaction-table .mult-ul:hover .mult-li:nth-child(1) {
+  background-color: #25d389;
+}
+#multipltaction-table .mult-ul:hover .mult-li:hover {
+  background-color: #82cbac;
+}
+#multipltaction-table .mult-ul .mult-li {
+  border: 0.1px solid #cacaca;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 700;
+}
+#multipltaction-table .mult-ul .mult-li:nth-child(1) {
+  background-color: #dbf5d3;
+}
+#multipltaction-table .mult-ul .mult-li:hover {
+  background-color: #dbf5d3;
+}
+#multipltaction-table .mult-ul .mult-li:hover:nth-child(1) {
+  background-color: #25d389;
+}
+
+/*----------------------------------------------*/
+#main-navs {
+  padding: 2rem;
+  position: relative;
+  z-index: 10;
+}
+#main-navs .blob {
+  width: 20rem;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+}
+#main-navs h1 {
+  margin: 0 auto;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  padding: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  background-color: #25d389;
+  border-radius: 0.5rem;
+}
+#main-navs ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 1rem;
+}
+#main-navs ul li a {
+  background-image: url("/IMG/application-svgrepo-com.svg");
+  background-size: auto;
+  display: block;
+  padding: 20%;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 2rem;
+  font-weight: 700;
+  border: 2px solid #a7529b;
+  transition: 0.3s;
+}
+#main-navs ul li a:hover {
+  background-color: #a7529b;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}/*# sourceMappingURL=block-stlye.css.map */
