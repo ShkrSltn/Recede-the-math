@@ -16,7 +16,6 @@ h1 {
   font-size: clamp(2rem, 10vw, 5rem);
   font-weight: 700;
   margin-bottom: 1rem;
-  max-width: 30rem;
 }
 
 h2 {
@@ -54,7 +53,7 @@ ul {
   flex-wrap: wrap; */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-  gap: 10px;
+  gap: 2rem;
   text-align: center;
 }
 .header__container ul #logo {
@@ -73,21 +72,23 @@ ul {
   font-weight: 700;
   font-size: 1.5rem;
   height: 100%;
-  padding: 10%;
   border-radius: 5px;
   background-color: #f0f0f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
 }
 .header__container ul li:hover {
-  background-color: #e0e0e0;
+  background-color: #82cbac;
 }
 .header__container ul li a {
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
+  display: block;
+  height: 100%;
+  padding: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .header__container ul li a img {
   width: 12rem;
