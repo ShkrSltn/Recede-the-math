@@ -72,7 +72,7 @@
   gap: 1rem;
 }
 #main-navs ul li a {
-  background-image: url("/IMG/application-svgrepo-com.svg");
+  background-image: url("../IMG/application-svgrepo-com.svg");
   background-size: auto;
   display: flex;
   align-items: center;
