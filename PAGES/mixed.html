@@ -20,7 +20,7 @@
     </header>
     <div class="all">
         <h1 class="main__title">Math problem generators</h1>
-        <h2>FIND</h2>
+        <h2>MIXED</h2>
         <form class="main-form form" id="myForm">
             <label for="min" class="form__label">Minimum
                 <input value="1" type="number" placeholder="min" id="min" class="form__input">
@@ -31,7 +31,7 @@
             <label for="count" class="form__label">Count of problems (max 50)
                 <input value="5" type="number" placeholder="count-of-problems" id="count" class="form__input">
             </label>
-            <input type="hidden" value="comp" name="type" id="forType">
+            <input type="hidden" value="mixed" name="type" id="forType">
             <button id="execute" type="submit" class="form__button">Generate</button>
             <div class="tips">
                 <p class="tips__text">
@@ -42,7 +42,7 @@
 
         <div class="problems__block" id="problemsB">
             <h2 class="problems__title">Problems</h2>
-            <div class="problems__container" id="find-container">
+            <div class="problems__container" id="container">
 
             </div>
         </div>
