@@ -115,6 +115,7 @@ let myOperation = (operation, min, max, count) => {
         for (let i = 0; i < count; i++) {
             let a = Math.floor(Math.random() * (max - min + 1)) + min;
             let b = Math.floor(Math.random() * (a - min + 1)) + min;
+
             let numb2 = Math.floor(a / b);
             let numb1 = numb2 * b;
             let resultStr = `${i + 1}) ${numb1} / ${numb2} = ?`;
@@ -126,6 +127,7 @@ let myOperation = (operation, min, max, count) => {
             newUl.appendChild(newLi);
         });
     }
+
 
     if (operation == "mult") {
         for (let i = 0; i < count; i++) {
@@ -141,4 +143,29 @@ let myOperation = (operation, min, max, count) => {
             newUl.appendChild(newLi);
         });
     }
+
+    if (operation == "comp") {
+        for (let i = 0; i < count; i++) {
+            let a = Math.floor(Math.random() * (max - min + 1)) + min;
+            let b = Math.floor(Math.random() * (max - min + 1)) + min;
+            let result = (a > b) ? '>' : (a < b) ? '<' : '=';
+            let resultStr = `${i + 1}) ${a} ? ${b} = ${result}`;
+            newArray.push(resultStr);
+        }
+        newArray.forEach((item) => {
+            let newLi = document.createElement("li");
+            newLi.textContent = item;
+            newUl.appendChild(newLi);
+        });
+    }
 };
+
+
+
+
+
+// Compare --------------------------------------------------------------------------------------------
+
+
+
+

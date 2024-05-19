@@ -149,6 +149,8 @@ header ul li a img {
 .general .photo {
   min-width: 15rem;
   height: 100%;
+  display: flex;
+  align-items: center;
 }
 .general .inner {
   animation: slideIn 1s ease-in-out;
