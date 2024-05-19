@@ -17,7 +17,4 @@ function generateMultiplicationTable(rows, columns) {
 
 }
 
-
-
-// Генерация таблицы умножения 10x10
 generateMultiplicationTable(10, 10);

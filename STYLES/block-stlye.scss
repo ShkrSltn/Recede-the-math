@@ -79,7 +79,7 @@ $second-green: #82cbac;
         padding: 0.5rem;
         width: fit-content;
         white-space: nowrap;
-        background-color: #a7529b;
+        background-color: $main-green;
 
         border-radius: 0.5rem;
     }
@@ -92,17 +92,19 @@ $second-green: #82cbac;
             a {
                 background-image: url("/IMG/application-svgrepo-com.svg");
                 background-size: auto;
-                display: block;
-                padding: 20%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 10rem;
                 text-align: center;
                 border-radius: 5px;
-                font-size: 2rem;
+                font-size: 2.5rem;
                 font-weight: 700;
-                border: 2px solid #a7529b;
+                border: 2px solid $main-green;
                 transition: 0.3s;
 
                 &:hover {
-                    background-color: #a7529b;
+                    background-color: $main-green;
                 }
             }
         }

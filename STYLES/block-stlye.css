@@ -63,7 +63,7 @@
   width: -moz-fit-content;
   width: fit-content;
   white-space: nowrap;
-  background-color: #a7529b;
+  background-color: #25d389;
   border-radius: 0.5rem;
 }
 #main-navs ul {
@@ -74,17 +74,19 @@
 #main-navs ul li a {
   background-image: url("/IMG/application-svgrepo-com.svg");
   background-size: auto;
-  display: block;
-  padding: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
   text-align: center;
   border-radius: 5px;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  border: 2px solid #a7529b;
+  border: 2px solid #25d389;
   transition: 0.3s;
 }
 #main-navs ul li a:hover {
-  background-color: #a7529b;
+  background-color: #25d389;
 }
 
 @keyframes gradient {

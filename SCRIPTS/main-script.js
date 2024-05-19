@@ -30,8 +30,8 @@ let myOperation = (operation, min, max, count) => {
         return;
     }
 
-    if (count > 50) {
-        alert('Count should be less than 50');
+    if (count > 80) {
+        alert('Count should be less than 80');
         return;
     }
     let newButton = document.createElement("button");
@@ -63,29 +63,22 @@ let myOperation = (operation, min, max, count) => {
         let b = Math.floor(Math.random() * (max - min + 1)) + min;
 
         if (op === "sum") {
-            /*             newDiv.before(newText);
-                        newText.textContent = `ADDITION! What will be the result of the following problems?`; */
+
             return `${a} + ${b} = ?`;
         } else if (op === "subt") {
             if (a < b) [a, b] = [b, a];
-            /*             newDiv.before(newText);
-                        newText.textContent = `SUBTRACTION! What will be the result of the following problems?`; */
+
             return `${a} - ${b} = ?`;
         } else if (op === "mult") {
-            /*             newDiv.before(newText);
-                        newText.textContent = `MULTIPLICATION! What will be the result of the following problems?`; */
+
             return `${a} * ${b} = ?`;
         } else if (op === "div") {
             while (b === 0 || a % b !== 0) {
                 a = Math.floor(Math.random() * (max - min + 1)) + min;
                 b = Math.floor(Math.random() * (max - min + 1)) + min;
             }
-            /*  newDiv.before(newText);
-             newText.textContent = `DIVIDING! What will be the result of the following problems?`; */
             return `${a} / ${b} = ?`;
         } else if (op === "comp") {
-            /*    newDiv.before(newText);
-               newText.textContent = `COMPARING! Which number are bigger ? Assign with >, <, or =`; */
             return `${a} ? ${b}`;
         }
     };
@@ -124,6 +117,12 @@ async function generatePDF() {
     const columnWidth = 80;
     const rowHeight = 20;
     const pageHeight = 280;
+
+    let currentDate = new Date().toLocaleDateString() + ' by ShkrSltn';
+    doc.setFontSize(10);
+    doc.setTextColor(150);
+    doc.text(currentDate, 150, 10);
+
 
     let problemTitle = '';
     if (problems.length > 0) {
@@ -182,8 +181,9 @@ async function generatePDF() {
         doc.setLineWidth(2);
         doc.setDrawColor(81, 175, 91);
         doc.line(10, y - 10, 200, y - 10);
-    }
 
+
+    }
 
     doc.save('problems.pdf');
 }
