@@ -59,13 +59,19 @@ ul {
 .header__container ul #logo {
   background: none;
   width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  transition: 0.7s ease-in-out;
 }
 .header__container ul #logo:hover {
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
+  transform: rotate(180deg);
+}
+.header__container ul #logo a {
+  padding: 0;
+  padding-top: 10%;
+}
+.header__container ul #logo a img {
+  width: 100%;
 }
 .header__container ul li {
   font-family: "Outfit", sans-serif;
@@ -73,27 +79,45 @@ ul {
   font-size: 1.5rem;
   height: 100%;
   border-radius: 5px;
-  background-color: #f0f0f0;
+  background-color: #25d389;
   cursor: pointer;
 }
 .header__container ul li:hover {
-  background-color: #82cbac;
+  background-color: #373737;
 }
 .header__container ul li a {
   text-transform: uppercase;
   text-decoration: none;
-  color: #000;
+  color: white;
   display: block;
   height: 100%;
   padding: 10%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
 }
 .header__container ul li a img {
-  width: 12rem;
+  width: 3rem;
 }
 
+#world {
+  margin-top: 0.5rem;
+  animation: movesonX 3s ease-in-out infinite;
+}
+
+@keyframes movesonX {
+  0% {
+    transform: translateX(-3rem);
+  }
+  50% {
+    transform: translateX(3rem);
+  }
+  100% {
+    transform: translateX(-3rem);
+  }
+}
 .main__container {
   padding: 5rem;
 }
