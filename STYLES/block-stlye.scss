@@ -3,7 +3,7 @@ $main-green: #25d389;
 $second-green: #82cbac;
 
 .block-title {
-    font-size: clamp(1rem, 2vw, 5rem);
+    font-size: clamp(1rem, 4vw, 5rem);
     font-weight: 700;
     margin-bottom: 1rem;
     padding: 0.5rem;
@@ -11,6 +11,7 @@ $second-green: #82cbac;
     white-space: nowrap;
     background-color: #dbf5d3;
     text-align: center;
+    margin: 2rem auto;
 }
 
 .highlight {
@@ -64,6 +65,9 @@ $second-green: #82cbac;
             font-weight: 700;
             font-size: clamp(0.7rem, 1.5vw, 2rem);
             min-width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             &:nth-child(1) {
                 background-color: #dbf5d3;
@@ -104,7 +108,7 @@ $second-green: #82cbac;
 
     h1 {
         margin: 0 auto;
-        font-size: clamp(2rem, 2vw, 3rem);
+        font-size: clamp(2rem, 5vw, 3rem);
         font-weight: 700;
         margin-bottom: 3rem;
         padding: 0.5rem;

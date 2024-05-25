@@ -19,12 +19,12 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -375,5 +375,8 @@ ul {
   }
   #functions ul {
     grid-template-columns: 1fr;
+  }
+  img {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
