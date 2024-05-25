@@ -24,7 +24,8 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 3rem;
+  text-transform: uppercase;
   font-weight: 700;
 }
 
@@ -61,10 +62,10 @@ ul {
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
-  transition: 0.7s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 .header__container ul #logo:hover {
-  transform: rotate(180deg);
+  transform: rotate(10deg);
 }
 .header__container ul #logo a {
   padding: 0;

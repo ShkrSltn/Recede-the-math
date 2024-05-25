@@ -1,3 +1,22 @@
 .green {
     color: #25d389;
+    background: linear-gradient(90deg, #72d2ff, #25d389, #8cd237, #6371ce);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
