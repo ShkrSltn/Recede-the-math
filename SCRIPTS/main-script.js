@@ -163,12 +163,9 @@ async function generatePDF() {
         }
     }
 
-
     doc.setFont('courier', 'bold');
     doc.setFontSize(24);
     doc.setTextColor(0, 0, 0);
-
-
     doc.text(problemTitle.toUpperCase(), 105, y - 10, null, null, 'center');
     y += 15;
 
@@ -183,14 +180,11 @@ async function generatePDF() {
 
 
         doc.setFontSize(14);
-
-
         let problemIndex = i;
         if (problemIndex < problems.length - 1) {
             let problemWithSquares = problems[problemIndex].replace(/\?/g, "_____");
             doc.text(problemWithSquares, textMarginLeft, y);
         }
-
 
         problemIndex = i + 1;
         if (problemIndex < problems.length - 1) {
@@ -200,12 +194,10 @@ async function generatePDF() {
 
         y += rowHeight;
 
-
         doc.setLineWidth(2);
         doc.setDrawColor(81, 175, 91);
         doc.line(10, y - 10, 200, y - 10);
     }
-
     doc.save('problems.pdf');
 }
 

@@ -6,6 +6,10 @@
     justify-content: center;
     flex-direction: column;
     gap: 50px;
+
+    h2 {
+        font-size: clamp(2rem, 5vw, 3rem);
+    }
 }
 
 .red {
