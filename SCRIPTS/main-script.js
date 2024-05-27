@@ -211,11 +211,9 @@ async function generatePDF() {
 
 
 function getGeneratedProblemValue(problem) {
-    // Updated regex to handle parentheses around negative numbers
     const regex = /(-?\d+|\(-\d+\))\s*([+\-*\/?])\s*(-?\d+|\(-\d+\))/;
     const match = problem.match(regex);
     if (match) {
-        // Remove parentheses if present and parse the numbers
         const firstValue = parseInt(match[1].replace(/[()]/g, ''));
         const operator = match[2];
         const secondValue = parseInt(match[3].replace(/[()]/g, ''));
