@@ -92,7 +92,6 @@ ul {
   color: white;
   display: block;
   height: 100%;
-  padding: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,7 +99,7 @@ ul {
   gap: 0.5rem;
 }
 .header__container ul li a img {
-  width: 3rem;
+  width: 30%;
 }
 
 #world {
@@ -176,6 +175,9 @@ ul {
   align-items: center;
   gap: 20%;
 }
+.general h2 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+}
 .general .photo {
   min-width: 15rem;
   height: 100%;
@@ -187,6 +189,9 @@ ul {
 }
 .general .subtitle {
   font-size: 1rem;
+}
+.general img {
+  width: 100%;
 }
 
 #important {
@@ -361,6 +366,9 @@ ul {
   header ul li {
     padding: 0.5rem;
   }
+  header img {
+    width: 50%;
+  }
   #easy .math-text h2 {
     font-size: 1.5rem;
   }
@@ -376,7 +384,24 @@ ul {
   #functions ul {
     grid-template-columns: 1fr;
   }
-  img {
-    width: 100%;
+  #functions img {
+    width: 50%;
   }
+  main img {
+    width: 50%;
+  }
+}
+.answer-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #373737;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+.answer-input:focus {
+  outline: none;
+}
+.answer-input:disabled {
+  background-color: #9ab9a5;
 }/*# sourceMappingURL=style.css.map */

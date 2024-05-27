@@ -11,6 +11,7 @@ function generateMultiplicationTable(rows, columns) {
         for (let j = 1; j <= columns; j++) {
             let li = document.createElement('li');
             li.className = 'mult-li';
+            li.style.cursor = 'pointer';
             li.innerText = (i * j);
             ul.appendChild(li);
             if (j === 1) {
@@ -51,5 +52,8 @@ function highlight(ulId) {
     });
 
 }
+
+
+
 
 generateMultiplicationTable(10, 10);

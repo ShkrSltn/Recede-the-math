@@ -105,7 +105,7 @@ ul {
                 color: white;
                 display: block;
                 height: 100%;
-                padding: 10%;
+
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -113,7 +113,7 @@ ul {
                 gap: 0.5rem;
 
                 img {
-                    width: 3rem;
+                    width: 30%;
                 }
             }
         }
@@ -200,6 +200,10 @@ ul {
     align-items: center;
     gap: 20%;
 
+    h2 {
+        font-size: clamp(1.5rem, 4vw, 3rem);
+    }
+
     .photo {
         min-width: 15rem;
         height: 100%;
@@ -213,6 +217,10 @@ ul {
 
     .subtitle {
         font-size: 1rem;
+    }
+
+    img {
+        width: 100%;
     }
 }
 
@@ -423,6 +431,10 @@ ul {
                 padding: 0.5rem;
             }
         }
+
+        img {
+            width: 50%;
+        }
     }
 
     #easy {
@@ -455,8 +467,33 @@ ul {
         ul {
             grid-template-columns: 1fr;
         }
+        img {
+            width: 50%;
+        }
     }
-    img {
-        width: 100%;
+
+    main {
+        img {
+            width: 50%;
+        }
+    }
+}
+
+//Generated objects
+
+.answer-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid $gray-text-color;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:disabled {
+        background-color: #9ab9a5;
     }
 }

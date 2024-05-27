@@ -1,4 +1,6 @@
 const form = document.getElementById('myForm');
+
+
 form.addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -40,10 +42,27 @@ let myOperation = (operation, min, max, count) => {
     newButton.className = "form__button";
     newButton.textContent = "Download PDF";
 
+    let enableButton = document.createElement("button");
+    enableButton.type = "button";
+    enableButton.textContent = 'Enable Quiz Mode';
+    enableButton.onclick = function () {
+        if (enableButton.dataset.mode === 'quiz') {
+            enableQuizMode();
+            enableButton.dataset.mode = 'disable';
+            enableButton.textContent = 'Disable Quiz Mode';
+        } else {
+            disableQuizMode();
+            enableButton.dataset.mode = 'quiz';
+            enableButton.textContent = 'Enable Quiz Mode';
+        }
+    };
+    enableButton.dataset.mode = 'quiz';
+    enableButton.className += "form__button";
+
+
+
     let newText = document.createElement("p");
     newText.className = 'results-text';
-
-
 
     problemsBlock.style.display = 'block';
     container.innerHTML = "";
@@ -55,6 +74,7 @@ let myOperation = (operation, min, max, count) => {
     newUl.className = 'list-ul';
     newDiv.appendChild(newUl);
     newDiv.appendChild(newButton);
+    newDiv.appendChild(enableButton);
 
     const operations = ["sum", "subt", "mult", "div", "comp"];
 
@@ -92,6 +112,9 @@ let myOperation = (operation, min, max, count) => {
     } else {
         for (let i = 0; i < count; i++) {
             let problemStr = generateProblem(operation);
+            if (problemStr.includes('-')) {
+                problemStr = problemStr.replace(/(-\d+)/g, '($1)');
+            }
             newArray.push(problemStr);
         }
     }
@@ -181,9 +204,90 @@ async function generatePDF() {
         doc.setLineWidth(2);
         doc.setDrawColor(81, 175, 91);
         doc.line(10, y - 10, 200, y - 10);
-
-
     }
 
     doc.save('problems.pdf');
+}
+
+
+function getGeneratedProblemValue(problem) {
+    // Updated regex to handle parentheses around negative numbers
+    const regex = /(-?\d+|\(-\d+\))\s*([+\-*\/?])\s*(-?\d+|\(-\d+\))/;
+    const match = problem.match(regex);
+    if (match) {
+        // Remove parentheses if present and parse the numbers
+        const firstValue = parseInt(match[1].replace(/[()]/g, ''));
+        const operator = match[2];
+        const secondValue = parseInt(match[3].replace(/[()]/g, ''));
+        let value;
+        switch (operator) {
+            case '+':
+                value = firstValue + secondValue;
+                break;
+            case '-':
+                value = firstValue - secondValue;
+                break;
+            case '*':
+                value = firstValue * secondValue;
+                break;
+            case '/':
+                value = firstValue / secondValue;
+                break;
+            case '?':
+                value = firstValue > secondValue ? firstValue : secondValue;
+                break;
+            default:
+                value = null;
+        }
+        return value;
+    }
+    return null;
+}
+
+
+
+function enableQuizMode() {
+    const problems = document.querySelectorAll('.list-ul li');
+    let correctCount = 0;
+    let wrongCount = 0;
+
+    problems.forEach((problem) => {
+        let ourResult = getGeneratedProblemValue(problem.textContent);
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.className = 'answer-input';
+        problem.appendChild(input);
+        input.addEventListener('input', function () {
+            const answer = parseInt(this.value);
+            const correctAnswer = ourResult;
+            const difference = Math.abs(answer - correctAnswer);
+            if (answer === correctAnswer) {
+                this.style.border = '2px solid green';
+                this.style.backgroundColor = 'lightgreen';
+                correctCount++;
+            } else if (difference <= 5) {
+                this.style.border = '2px solid yellow';
+                this.style.backgroundColor = 'lightyellow';
+                wrongCount++;
+            } else {
+                this.style.border = '2px solid red';
+                this.style.backgroundColor = 'lightcoral';
+                wrongCount++;
+            }
+        });
+        /* 
+                input.addEventListener('change', function () {
+                    this.disabled = true;
+                }); */
+    });
+
+    console.log('Correct Answers:', correctCount);
+    console.log('Wrong Answers:', wrongCount);
+}
+
+function disableQuizMode() {
+    const inputs = document.querySelectorAll('.answer-input');
+    inputs.forEach((input) => {
+        input.remove();
+    });
 }
