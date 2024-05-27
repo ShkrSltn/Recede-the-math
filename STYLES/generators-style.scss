@@ -1,6 +1,7 @@
 @import url(/STYLES/style.scss);
 
 .all {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,6 +101,7 @@
 }
 
 .problems__block {
+    width: 100%;
     font-family: monospace;
 }
 
@@ -109,6 +111,7 @@
 }
 
 #container {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -122,7 +125,7 @@
 }
 
 .results-div {
-    width: 100vw;
+    width: 100%;
     gap: 10px;
     text-align: center;
     padding: 1rem 2rem;
