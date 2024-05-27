@@ -53,7 +53,4 @@ function highlight(ulId) {
 
 }
 
-
-
-
 generateMultiplicationTable(10, 10);

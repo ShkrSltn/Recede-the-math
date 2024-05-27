@@ -1,5 +1,16 @@
 const form = document.getElementById('myForm');
+let minInput = document.getElementById('min');
+let maxInput = document.getElementById('max');
+let countInput = document.getElementById('count');
 
+//const values
+let minValue = 1;
+let maxValue = 100;
+let countValue = 20;
+
+minInput.value = minValue;
+maxInput.value = maxValue;
+countInput.value = countValue;
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -234,8 +245,6 @@ function getGeneratedProblemValue(problem) {
     return null;
 }
 
-
-
 function enableQuizMode() {
     const problems = document.querySelectorAll('.list-ul li');
     let correctCount = 0;
@@ -243,9 +252,10 @@ function enableQuizMode() {
 
     problems.forEach((problem) => {
         let ourResult = getGeneratedProblemValue(problem.textContent);
-        const input = document.createElement('input');
-        input.type = 'text';
+        let input = document.createElement('input');
+        input.type = 'number';
         input.className = 'answer-input';
+
         problem.appendChild(input);
         input.addEventListener('input', function () {
             const answer = parseInt(this.value);
