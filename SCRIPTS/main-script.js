@@ -117,6 +117,9 @@ let myOperation = (operation, min, max, count) => {
         for (let i = 0; i < count; i++) {
             let randomOp = operations[Math.floor(Math.random() * operations.length)];
             let problemStr = generateProblem(randomOp);
+            if (problemStr.includes('-')) {
+                problemStr = problemStr.replace(/(-\d+)/g, '($1)');
+            }
             newArray.push(problemStr);
         }
     } else {
