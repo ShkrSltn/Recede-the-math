@@ -5,7 +5,7 @@ let countInput = document.getElementById('count');
 
 //const values
 let minValue = 1;
-let maxValue = 100;
+let maxValue = 10;
 let countValue = 20;
 
 minInput.value = minValue;
@@ -94,16 +94,15 @@ let myOperation = (operation, min, max, count) => {
         let b = Math.floor(Math.random() * (max - min + 1)) + min;
 
         if (op === "sum") {
-
             return `${a} + ${b} = ?`;
         } else if (op === "subt") {
             if (a < b) [a, b] = [b, a];
 
             return `${a} - ${b} = ?`;
         } else if (op === "mult") {
-
             return `${a} * ${b} = ?`;
         } else if (op === "div") {
+            minInput.value = 2;
             while (b === 0 || a % b !== 0) {
                 a = Math.floor(Math.random() * (max - min + 1)) + min;
                 b = Math.floor(Math.random() * (max - min + 1)) + min;
